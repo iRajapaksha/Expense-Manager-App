@@ -1,7 +1,7 @@
 
 import 'package:expense_tracker/models/expense.dart';
 import 'package:expense_tracker/models/income.dart';
-import 'package:expense_tracker/pages/welcome.dart';
+import 'package:expense_tracker/pages/splash_screen.dart';
 import 'package:expense_tracker/server/categories_adapter.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: WelcomePage(),
+      home: SplashScreen(),
     );
   }
 }
