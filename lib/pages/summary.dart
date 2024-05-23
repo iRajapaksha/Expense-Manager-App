@@ -59,7 +59,7 @@ class Summary extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            color: Color.fromRGBO(64, 145, 108,1),
+            color: Color.fromRGBO(149, 213, 178,1),
             height: 100,
             width: double.infinity,
             child: const Center(
@@ -83,7 +83,7 @@ class Summary extends StatelessWidget {
 
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
-              color: Color.fromRGBO(64, 145, 108,1),
+              color: Color.fromRGBO(82, 183, 136, 1),
             ),
             //color: Colors.black87 ,
             child: Column(

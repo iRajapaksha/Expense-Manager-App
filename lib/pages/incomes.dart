@@ -120,7 +120,7 @@ class _CategoriesState extends State<Incomes> {
       body: Column(
         children: [
           Container(
-            color: Color.fromRGBO(64, 145, 108,1),
+            color: Color.fromRGBO(149, 213, 178,1),
             height: 100,
             width: double.infinity,
             child: const Center(
@@ -147,7 +147,7 @@ class _CategoriesState extends State<Incomes> {
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
-                color: Color.fromRGBO(64, 145, 108,1),
+                color: Color.fromRGBO(82, 183, 136, 1),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -208,12 +208,22 @@ class _CategoriesState extends State<Incomes> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(5.0),
-                child: FloatingActionButton(
-                  onPressed: addIncome,
-                  child: const Icon(Icons.add),
-                  backgroundColor: Color.fromRGBO(64, 145, 108,1),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100.0),
+                child: GestureDetector(
+                    onTap: addIncome,
+                  child: Container(
+                    width: 400,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color.fromRGBO(82, 183, 136, 1),
+                    ),
+                    child: Center(
+                      child: Text('Add New Income', style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20,
+                      ),),
+                    ),
+                   
                   ),
                 ),
               ),

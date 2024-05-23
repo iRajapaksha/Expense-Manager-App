@@ -85,11 +85,11 @@ class _ExpensesState extends State<Expenses> {
         : 0.0;
 
     return Scaffold(
-      backgroundColor: Color.fromRGBO(149, 213, 178,1),
+      backgroundColor: Color.fromRGBO(149, 213, 178, 1),
       body: Column(
         children: [
           Container(
-            color: Color.fromRGBO(64, 145, 108,1),
+            color: Color.fromRGBO(149, 213, 178, 1),
             height: 100,
             width: double.infinity,
             child: const Center(
@@ -111,7 +111,7 @@ class _ExpensesState extends State<Expenses> {
             width: double.infinity,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
-              color: Color.fromRGBO(64, 145, 108,1),
+              color: Color.fromRGBO(82, 183, 136, 1),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -129,7 +129,7 @@ class _ExpensesState extends State<Expenses> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
-                        'Today  ',
+                        'Today : ',
                         style: TextStyle(
                           color: Color.fromARGB(255, 0, 0, 0),
                           fontSize: 20,
@@ -159,7 +159,7 @@ class _ExpensesState extends State<Expenses> {
           ),
           Expanded(
             child: Container(
-             // color: Color.fromARGB(255, 249, 213, 239),
+              // color: Color.fromARGB(255, 249, 213, 239),
               child: ExpenseList(
                 expenseList: db.expenseList,
                 onDeleteExpense: onDeleteExpense,
@@ -171,12 +171,25 @@ class _ExpensesState extends State<Expenses> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(5.0),
-                child: FloatingActionButton(
-                  onPressed: _openAddExpensesOverlay,
-                  child: const Icon(Icons.add),
-                  backgroundColor: Color.fromRGBO(64, 145, 108,1),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(1000.0),
+                child: GestureDetector(
+                  onTap: _openAddExpensesOverlay,
+                  child: Container(
+                    width: 400,
+                    height: 50,
+
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color.fromRGBO(82, 183, 136, 1),
+                    ),
+                    child: Center(
+                        child: const Text(
+                      'Add New Expense',
+                      style: TextStyle(fontWeight: FontWeight.w500,
+                      fontSize: 20),
+                    )),
+                    // backgroundColor: Color.fromRGBO(64, 145, 108,1),
+                    // shape: RoundedRectangleBorder(
+                    //   borderRadius: BorderRadius.circular(1000.0),
                   ),
                 ),
               ),
