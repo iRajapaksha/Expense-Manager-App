@@ -29,7 +29,6 @@ class _TabsControllerState extends State<TabsController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         body: _pages[_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
@@ -46,13 +45,13 @@ class _TabsControllerState extends State<TabsController> {
               label: 'Incomes',
             ),
           ],
+          backgroundColor: Color.fromRGBO(82, 183, 136, 1),
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
-          type: BottomNavigationBarType.shifting,
-          selectedItemColor: Color.fromARGB(255, 107, 0, 102),
-          unselectedItemColor: Color.fromARGB(255, 192, 191, 191),
-          //backgroundColor: Color.fromARGB(255, 0, 0, 0),
-          //fixedColor: Color.fromARGB(255, 53, 192, 69),
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: Color.fromARGB(255, 0, 0, 0),
+          unselectedItemColor: Color.fromARGB(255, 255, 241, 241),
+   
         ),
       ),
     );

@@ -55,11 +55,11 @@ class Summary extends StatelessWidget {
         .toList();
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(31, 136, 6, 6),
+      backgroundColor: Color.fromRGBO(149, 213, 178,1),
       body: Column(
         children: [
           Container(
-            color: Color.fromARGB(255, 0, 0, 0),
+            color: Color.fromRGBO(64, 145, 108,1),
             height: 100,
             width: double.infinity,
             child: const Center(
@@ -83,7 +83,7 @@ class Summary extends StatelessWidget {
 
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
-              color: Color.fromARGB(223, 241, 173, 13),
+              color: Color.fromRGBO(64, 145, 108,1),
             ),
             //color: Colors.black87 ,
             child: Column(
@@ -101,12 +101,6 @@ class Summary extends StatelessWidget {
             ),
           ),
 
-          // const Row(
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   children: [
-          //     //Text('asdsadaaaaaaaaaaaaaaaaaaaaaaaa'),
-
-          //   ],),
           const SizedBox(
             height: 30,
           ),
@@ -193,7 +187,7 @@ class Summary extends StatelessWidget {
                 sections: pieChartSections,
                 sectionsSpace: 0,
                 centerSpaceRadius: 80,
-                centerSpaceColor: Color.fromARGB(255, 236, 193, 216),
+               // centerSpaceColor: Color.fromRGBO(64, 145, 108,1),
               )),
           Text("Expenses \n Rs. ${totalExpense.toString()}"),
         ],

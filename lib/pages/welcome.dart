@@ -37,6 +37,7 @@ class _WelcomePageState extends State<WelcomePage> {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: Color.fromRGBO(149, 213, 178,1),
       body: Stack(
         children: [
           PageView(

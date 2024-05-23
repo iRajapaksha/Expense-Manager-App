@@ -60,17 +60,6 @@ class _ExpensesState extends State<Expenses> {
     ));
   }
 
-  // void _openAddExpensesOverlay() {
-  //   showModalBottomSheet(
-  //     context: context,
-  //     builder: (context) {
-  //       return AddNewExpense(
-  //         onAddExpense: onAddNewExpense,
-  //       );
-  //     },
-  //     isScrollControlled: true,
-  //   );
-  // }
   void _openAddExpensesOverlay() {
     showDialog(
       context: context,
@@ -96,11 +85,11 @@ class _ExpensesState extends State<Expenses> {
         : 0.0;
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 227, 227, 227),
+      backgroundColor: Color.fromRGBO(149, 213, 178,1),
       body: Column(
         children: [
           Container(
-            color: Color.fromARGB(255, 0, 0, 0),
+            color: Color.fromRGBO(64, 145, 108,1),
             height: 100,
             width: double.infinity,
             child: const Center(
@@ -122,7 +111,7 @@ class _ExpensesState extends State<Expenses> {
             width: double.infinity,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
-              color: Color.fromARGB(223, 241, 173, 13),
+              color: Color.fromRGBO(64, 145, 108,1),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -140,7 +129,7 @@ class _ExpensesState extends State<Expenses> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
-                        'Today is : ',
+                        'Today  ',
                         style: TextStyle(
                           color: Color.fromARGB(255, 0, 0, 0),
                           fontSize: 20,
@@ -170,7 +159,7 @@ class _ExpensesState extends State<Expenses> {
           ),
           Expanded(
             child: Container(
-              color: Color.fromARGB(255, 249, 213, 239),
+             // color: Color.fromARGB(255, 249, 213, 239),
               child: ExpenseList(
                 expenseList: db.expenseList,
                 onDeleteExpense: onDeleteExpense,
@@ -185,7 +174,7 @@ class _ExpensesState extends State<Expenses> {
                 child: FloatingActionButton(
                   onPressed: _openAddExpensesOverlay,
                   child: const Icon(Icons.add),
-                  backgroundColor: Color.fromARGB(255, 255, 162, 2),
+                  backgroundColor: Color.fromRGBO(64, 145, 108,1),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(1000.0),
                   ),
