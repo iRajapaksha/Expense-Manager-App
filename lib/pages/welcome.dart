@@ -37,20 +37,35 @@ class _WelcomePageState extends State<WelcomePage> {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Color.fromRGBO(149, 213, 178,1),
+      backgroundColor: Color.fromRGBO(149, 213, 178, 1),
       body: Stack(
         children: [
           PageView(
             controller: _pageController,
             children: [
-              _welcomePage(screenWidth, screenHeight, 'images/budget.png', 'Welcome to Expense Manager', 'Manage your expenses efficiently.'),
-              _welcomePage(screenWidth, screenHeight, 'images/spending.png', 'Track Your Spending', 'Keep track of your daily expenses.'),
-              _welcomePage(screenWidth, screenHeight, 'images/income.png', 'Analyze Your Data', 'Get insights into your spending patterns.'),
+              _welcomePage(
+                  screenWidth,
+                  screenHeight,
+                  'images/budget.png',
+                  'Welcome to Expense Manager',
+                  'Efficiently manage your finances, set budgets, and track expenses to achieve your financial goals easily.'),
+              _welcomePage(
+                  screenWidth,
+                  screenHeight,
+                  'images/spending.png',
+                  'Track Your Spending',
+                  'Easily log daily transactions, categorize expenses, and monitor your spending habits to stay informed about your finances.'),
+              _welcomePage(
+                  screenWidth,
+                  screenHeight,
+                  'images/income.png',
+                  'Analyze Your Data',
+                  'Gain insights into your financial patterns with detailed reports, helping you make smarter financial decisions and achieve stability.'),
             ],
           ),
           Positioned(
             bottom: screenHeight * 0.15,
-            left: screenWidth * 0.4,
+            left: screenWidth * 0.45,
             child: SmoothPageIndicator(
               controller: _pageController,
               count: 3,
@@ -64,13 +79,14 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
           ),
           Positioned(
-            left: screenWidth * 0.35,
+            left: screenWidth * 0.28,
             bottom: screenHeight * 0.05,
             child: ElevatedButton(
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const TabsController()),
+                  MaterialPageRoute(
+                      builder: (context) => const TabsController()),
                 );
               },
               style: ButtonStyle(
@@ -92,15 +108,16 @@ class _WelcomePageState extends State<WelcomePage> {
     );
   }
 
-  Widget _welcomePage(double screenWidth, double screenHeight, String image, String heading, String text) {
+  Widget _welcomePage(double screenWidth, double screenHeight, String image,
+      String heading, String text) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Image.asset(
           image,
-          width: screenWidth * 0.5,
-          height: screenHeight * 0.3,
+          width: screenWidth * 0.4,
+          height: screenHeight * 0.25,
         ),
         const SizedBox(height: 30),
         Text(

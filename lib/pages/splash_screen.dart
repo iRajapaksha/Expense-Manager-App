@@ -39,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 4), () {
       navigateToNextScreen(context);
     });
   }
@@ -63,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen>
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Image.asset(
-          'images/budget.png',
+          'images/logo.png',
           width: 100,
           height: 100,
         ),
