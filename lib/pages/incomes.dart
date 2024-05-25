@@ -41,6 +41,7 @@ class _CategoriesState extends State<Incomes> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
+        backgroundColor: Color.fromRGBO(149, 213, 178, 1),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -277,7 +278,7 @@ class _CategoriesState extends State<Incomes> {
               ),
             ),
             decoration: BoxDecoration(
-              color: Color.fromRGBO(64, 145, 108,1),
+              color: Color.fromRGBO(116, 198, 157,1),
               borderRadius: BorderRadius.circular(16),
 
               //

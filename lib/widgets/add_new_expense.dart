@@ -85,7 +85,7 @@ class _AddNewExpenseState extends State<AddNewExpense> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Color.fromARGB(255, 241, 222, 152),
+      backgroundColor: Color.fromRGBO(149, 213, 178, 1),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -99,7 +99,7 @@ class _AddNewExpenseState extends State<AddNewExpense> {
                   padding: EdgeInsets.all(5.5),
                   child: Icon(
                     Icons.cancel,
-                    color: Colors.red,
+                    color: Colors.black,
                     size: 30.0,
                   ),
                 ),
@@ -183,9 +183,9 @@ class _AddNewExpenseState extends State<AddNewExpense> {
                       onPressed: _handleFormSubmit,
                       style: const ButtonStyle(
                         backgroundColor: MaterialStatePropertyAll(
-                            Color.fromARGB(255, 157, 104, 243)),
+                            Color.fromRGBO(82, 183, 136, 1)),
                       ),
-                      child: const Text("Save"),
+                      child: const Text("Save",style: TextStyle(color: Colors.black),),
                     ),
         ],
       ),

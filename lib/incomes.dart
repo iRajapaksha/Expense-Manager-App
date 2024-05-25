@@ -44,47 +44,45 @@ class _CategoriesState extends State<Incomes> {
   }
 
   void addIncome() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        // title: Text("Add Income"),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            TextField(
-              controller: newIncome,
-              decoration: const InputDecoration(
-                hintText: "Add new income",
-                label: Text("Title"),
-              ),
-              keyboardType: TextInputType.text,
+    AlertDialog(
+      backgroundColor: Color.fromRGBO(149, 213, 178, 1),
+      // title: Text("Add Income"),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          TextField(
+            controller: newIncome,
+            decoration: const InputDecoration(
+              hintText: "Add new income",
+              label: Text("Title"),
             ),
-            TextField(
-              decoration: const InputDecoration(
-                hintText: "Enter amount",
-                label: Text("Amount"),
-              ),
-              controller: newAmount,
-              keyboardType: TextInputType.number,
-            ),
-          ],
-        ),
-        actions: [
-          MaterialButton(
-            onPressed: () {
-              Navigator.of(context).pop(); // Close the dialog
-              _addIncome(); // Add the category
-            },
-            child: const Text("Add"),
+            keyboardType: TextInputType.text,
           ),
-          MaterialButton(
-            onPressed: () {
-              Navigator.of(context).pop(); // Close the dialog
-            },
-            child: const Text("Cancel"),
+          TextField(
+            decoration: const InputDecoration(
+              hintText: "Enter amount",
+              label: Text("Amount"),
+            ),
+            controller: newAmount,
+            keyboardType: TextInputType.number,
           ),
         ],
       ),
+      actions: [
+        MaterialButton(
+          onPressed: () {
+            Navigator.of(context).pop(); // Close the dialog
+            _addIncome(); // Add the category
+          },
+          child: const Text("Add"),
+        ),
+        MaterialButton(
+          onPressed: () {
+            Navigator.of(context).pop(); // Close the dialog
+          },
+          child: const Text("Cancel"),
+        ),
+      ],
     );
   }
 
